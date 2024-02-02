@@ -27,15 +27,22 @@ int main()
     case 'c':
       printf("You selected chars.\n");
       printf("Choose which font you want 11x16(e) or 5x7 (f).\n");
+      while(1){
       char c2;
       scanf(" %c",&c2);
       if(c2 == 'e'){
 	for (char c = 'A'; c < 'D'; c++)
 	  print_char_11x16(c);
+	break;
       }
       if(c2 == 'f'){
 	for(char c = 'A';c<'D';c++)
 	  print_char_5x7(c);
+	break;
+      }
+      else{
+	printf("Wrong character chosen, please choose 'e' or 'f'\n");
+      }
       }
       break;
     case 'q':
